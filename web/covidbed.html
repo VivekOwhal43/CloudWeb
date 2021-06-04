@@ -1,0 +1,81 @@
+<html>
+  <head>
+    {% load static%}
+    <title>
+        Covid Bed
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'stylebed.css' %}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" src="pune.json"></script> -->
+    <!-- <script type="text/javascript" src="mumbai.json"></script>  -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'main.css' %}">
+    <script type="text/javascript" src="{% static 'details.js' %}"></script>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">COVID DONATION HUB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'beds' %}" tabindex="-1" aria-disabled="true">Emergency Help Line</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'contact' %}" tabindex="-1" aria-disabled="true">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-warning" type="submit">GO</button>
+          </form>
+        </div>
+    </nav>
+        <div class="container cont">
+            <div class="row">
+              <div class="col-lg-12">
+                <form>
+                    <div class="mb-3">
+                      <h2>Covid Bed Details : </h2>
+                      <hr>
+                        <label for="exampleInputEmail1" class="form-label">City : </label>
+                      <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+                      <select name="cities" id="cities">
+                        <option value="pune">Pune</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="hyderabad">Hyderabad</option>
+                      </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="button" class="btn btn-primary" id="getdetails" onclick="constructTable('#table')">Get Details</button>
+                      <p id="demo"></p>
+                      <br>
+                      <table class="table table-bordered table-striped" id="table">
+
+                      </table>
+                    </div>
+                  </form>
+              </div>
+              
+            </div>
+          </div>
+          <script>
+
+          </script>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="undefined" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="undefined" crossorigin="anonymous"></script>
+    </body>
+</html>

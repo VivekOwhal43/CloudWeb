@@ -23,4 +23,5 @@ urlpatterns = [
     path('index.html/',views.index_view,name='index'),
     path('about.html/',views.about_view,name='about'),
     path('contact_us.html/',views.contact_view,name='contact'),
+    path('covidbed.html/',views.bedview,name='beds'),
 ]
